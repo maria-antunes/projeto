@@ -1,8 +1,8 @@
-- title: About
-  url: about.html
-
 - title: Projects
   url: projects.html
+
+- title: About
+  url: about.html
 
 - title: Contacts
   url: contacts.html
