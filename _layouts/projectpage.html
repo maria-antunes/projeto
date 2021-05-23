@@ -5,13 +5,11 @@ layout: default
     <figure>
         <img src=" {{ page.image_path | relative_url }}" alt=" {{ page.image_alt }}">
     </figure>
-
     <div>
         <h3> {{ page.title }} </h3>
         <div class="category"> {{ page.category }} </div>
         <p> {{ page.description }} </p>
     </div>
-    
     <div>
         {{ content }}
     </div>

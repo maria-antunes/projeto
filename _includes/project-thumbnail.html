@@ -1,0 +1,15 @@
+<article>
+    <a href="{{ project.url | relative_url }}"> 
+        <figure>
+            <img src=" {{ project.image_path }}" alt=" {{ project.image_alt}}">
+        </figure>
+    </a>
+    <div class="text-container">
+        <h3> {{ project.title }} </h3>
+        <div class="category"> {{ project.category }} </div>
+        <div class="timeline"> {{ project.timeline }} </div>
+        <p> {{ project.description }} </p>
+        <a href="{{ project.url | relative_url }}" target="_blank">Read more about this project ></a>
+     </div>
+</article>
+ 
