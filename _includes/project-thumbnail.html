@@ -1,5 +1,5 @@
 <article>
-    <a href="{{ project.url | relative_url }}"> 
+    <a href="{{ project.url | relative_url }}" title="Go to {{ project.title }}"> 
         <figure>
             <img src=" {{ project.image_path }}" alt=" {{ project.image_alt}}">
         </figure>
@@ -9,7 +9,15 @@
         <div class="category"> {{ project.category }} </div>
         <div class="timeline"> {{ project.timeline }} </div>
         <p> {{ project.description }} </p>
-        <a href="{{ project.url | relative_url }}" target="_blank">Read more about this project ></a>
+        <a href="{{ project.url | relative_url }}" title="Link to {{ project.title }}">Read more about 
+            {% if project.small_title %}  
+                {{ project.small_title }} 
+            {% else %} 
+                {{ project.title }} 
+            {% endif %} > 
+        </a>
      </div>
 </article>
+
+<!-- title nos <a></a> ?? -->
  
