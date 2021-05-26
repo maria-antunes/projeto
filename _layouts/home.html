@@ -4,16 +4,16 @@ layout: default
 
 <header>
   <p> Hi!</p>
-  <p> I’m Maria Antunes, a designer developing research-driven, user-centred digital products along with compelling branding & visual storytelling, creating meaningful experiences for users and businesses alike.</p>
+  <p> I’m Maria Antunes, a designer developing research-driven, user-centred digital products along with compelling
+    branding & visual storytelling, creating meaningful experiences for users and businesses alike.</p>
 </header>
 
 <section>
   <h2>Check my Latest Work </h2>
-  {% for project in site.projects%}
-    {% if project.latest == true %}
+  {% assign projects = site.projects | sort: 'order' %}
+  {% for project in projects %}
+    {% if project.inhomepage == true %}
       {% include project-thumbnail.html %}
     {% endif %}
-  {% endfor%}
+  {% endfor %}
 </section>
-
-<!-- Como mudar a ordem dos projetos? -->

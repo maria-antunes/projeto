@@ -1,11 +1,15 @@
 <article>
     <a href="{{ project.url | relative_url }}" title="Go to {{ project.title }}"> 
         <figure>
-            <img src=" {{ project.image_path }}" alt=" {{ project.image_alt}}">
+            <img src="assets/img/{{ project.image_path }}" alt=" {{ project.image_alt }}">
         </figure>
     </a>
     <div class="text-container">
-        <h3> {{ project.title }} </h3>
+        {% if page.layout == "home" %}
+            <h3> {{ project.title }} </h3>
+        {% else %}
+            <h4> {{ project.title }} </h4>
+        {% endif %}
         <div class="category"> {{ project.category }} </div>
         <div class="timeline"> {{ project.timeline }} </div>
         <p> {{ project.description }} </p>
