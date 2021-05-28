@@ -4,7 +4,7 @@ title: Latest Work
 ---
 
 <!-- Como faço para alterar a ordem em que aparecem os projetos?? -->
-<h3>Product Design</h3>
+<h2>Product Design</h2>
 {% assign projects = site.projects | sort: 'order' %}
 {% for project in projects %}
     {% if project.category == "Product Design" %}
@@ -12,7 +12,7 @@ title: Latest Work
     {% endif%}
 {% endfor%}
 
-<h3>Communication Design</h3>
+<h2>Communication Design</h2>
 {% assign projects = site.projects | sort: 'order' %}
 {% for project in projects %}
     {% unless project.category == "Product Design" %}

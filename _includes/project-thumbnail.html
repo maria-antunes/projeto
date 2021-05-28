@@ -1,24 +1,19 @@
 <article>
     <a href="{{ project.url | relative_url }}" title="Go to {{ project.title }}"> 
         <figure>
-            <img src="assets/img/{{ project.image_path }}" alt=" {{ project.image_alt }}">
+            <img src="assets/img/{{ project.thumbnail_path }}" alt="{{ project.thumbnail_alt }}">
         </figure>
     </a>
     <div class="text-container">
-        {% if page.layout == "home" %}
-            <h3> {{ project.title }} </h3>
-        {% else %}
-            <h4> {{ project.title }} </h4>
-        {% endif %}
-        <div class="category"> {{ project.category }} </div>
-        <div class="timeline"> {{ project.timeline }} </div>
+        <h3> {{ project.title }} </h3>
+        <div class="timeline-and-category"> {{ project.timeline }} • {{ project.category }}</div>
         <p> {{ project.description }} </p>
         <a href="{{ project.url | relative_url }}" title="Link to {{ project.title }}">Read more about 
             {% if project.small_title %}  
                 {{ project.small_title }} 
             {% else %} 
                 {{ project.title }} 
-            {% endif %} > 
+            {% endif %} →
         </a>
      </div>
 </article>

@@ -1,18 +1,67 @@
 ---
 layout: default
 ---
-<p><a href="{{ site.baseurl }}/latest-work.html"> < Back to All Work</a></p>
 
 <article>
-    <figure>
-        <img src="../assets/img/{{ page.image_path }}" alt="{{ page.image_alt }}">
-    </figure>
-    <div>
-        <h3> {{ page.title }} </h3>
-        <div class="category"> {{ page.category }} </div>
+    <header>
+        <figure>
+            <img src="../assets/img/{{ page.thumbnail_path }}" alt="{{ page.thumbnail_alt }}">
+        </figure>
+        <h1> {{ page.title }} </h1>
         <p> {{ page.description }} </p>
-    </div>
-    <div>
-        {{ content }}
-    </div>
+    </header>
+    <section class="project-overview">
+        <h2>Timeline</h2>
+        <p> {{ page.timeline }} </p>
+        <h2>Tools</h2>
+        <ul>
+            {% for tool in page.tools %}
+            <li> {{ tool }} </li>
+            {% endfor %}
+        </ul>
+        <h2>Scope</h2>
+        <p>{{ page.scope }}</p>
+        <h2>Collaboration with</h2>
+        <ul>
+            {% for collab in page.collaboration %}
+            <li> {{ collab }} </li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% if page.the_challenge_text %}
+        <section class="challenge">
+            <h2> The Challenge </h2>
+            {% for paragraph in page.the_challenge_text %}
+                    <p> {{ paragraph.paragraph }} </p>
+                {% endfor %}
+        </section>
+    {% endif %}
+        <section class="process">
+            {% if page.process_text %}
+                <h2> Process </h2>
+                {% for paragraph in page.process_text %}
+                    <p> {{ paragraph.paragraph }} </p>
+                {% endfor %}
+            {% endif %}
+            <figure>
+                {% for image in page.images %}
+                    <img src="../assets/img/{{ image.image_path }}" alt="{{ image.image_alt }}">
+                {% endfor %}
+            </figure>
+        </section>
+    {% if page.takeaways_text %}
+        <section class="takeaways">
+            <h2> Takeaways </h2>
+            {% for take in page.takeaways_text %}
+                <li> {{ take.takeaway }} </li>
+            {% endfor %}
+        </section>
+    {% endif %}
+    <a href="https://www.behance.net/gallery/{{page.behance_link}}" title="Link to {{ page.title }}" target="_blank"> See 
+        {% if page.small_title %}  
+            {{ page.small_title }} 
+        {% else %} 
+            {{ page.title }} 
+        {% endif %} on Behance →
+    </a>
 </article>
