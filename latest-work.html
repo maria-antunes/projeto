@@ -5,18 +5,22 @@ title: Latest Work
 <section>
     <h2>Product Design</h2>
     {% assign projects = site.projects | sort: 'order' %}
-    {% for project in projects %}
-        {% if project.category == "Product Design" %}
-            {% include project-thumbnail.html %}
-        {% endif%}
-    {% endfor%}
+    <div class="grid-container" >
+        {% for project in projects %}
+            {% if project.category == "Product Design" %}
+                {% include project-thumbnail.html %}
+            {% endif%}
+        {% endfor%}
+    </div>
 </section>
-<section>
+<section>   
     <h2>Communication Design</h2>
     {% assign projects = site.projects | sort: 'order' %}
-    {% for project in projects %}
-        {% unless project.category == "Product Design" %}
-            {% include project-thumbnail.html %}
-        {% endunless %}
-    {% endfor%}
+    <div class="grid-container" >
+        {% for project in projects %}
+            {% unless project.category == "Product Design" %}
+                {% include project-thumbnail.html %}
+            {% endunless %}
+        {% endfor%}
+    </div>
 </section>

@@ -9,9 +9,11 @@ layout: default
 <section>
   <h2>Check my Latest Work ↓</h2>
   {% assign projects = site.projects | sort: 'order' %}
-  {% for project in projects %}
-    {% if project.inhomepage == true %}
-      {% include project-thumbnail.html %}
-    {% endif %}
-  {% endfor %}
+  <div class="grid-container">
+    {% for project in projects %}
+      {% if project.inhomepage == true %}
+        {% include project-thumbnail.html %}
+      {% endif %}
+    {% endfor %}
+  </div>
 </section>
