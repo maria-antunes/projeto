@@ -4,7 +4,7 @@ title: Rethinking fbaul's website for International Students
 small_title: Fbaul's website for IN students
 inhomepage: true
 order: 2
-thumbnail_path: FBAUL01.png
+thumbnail_path: FBAUL01.jpg
 thumbnail_alt: Fbaul's website homepage mockup
 description: How can we improve international students' experience on Fbaul's website, considering the current pain points?
 category: Product Design
@@ -19,13 +19,9 @@ process_text:
   - paragraph: 'We analyzed websites from universities and students portals, in order to understand what is already done in the International Students field. To understand better our target, we created two personas representing two exchange students.'
   - paragraph: 'Our main objectives with the redesign were: Re-organize the information architecture; Provide greater accessibility and intuitiveness; Make the website cleaner and more appealing; Building more dynamic pages.'
 images:
-  - image_path: FBAUL01.png
+  - image_path: FBAUL02.jpg
     image_alt: Fbaul's website homepage mockup
-  - image_path: FBAUL01.png
-    image_alt: Fbaul's website homepage mockup
-  - image_path: FBAUL01.png
-    image_alt: Fbaul's website homepage mockup
-  - image_path: FBAUL01.png
+  - image_path: FBAUL03.jpg
     image_alt: Fbaul's website homepage mockup
 takeaways_text:
   - takeaway: A good information architecture goes a long way
