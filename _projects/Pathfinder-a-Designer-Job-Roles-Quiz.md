@@ -7,7 +7,7 @@ thumbnail_path: PathFinder01.jpg
 thumbnail_alt: Computer and Phone Mockup wiht Homepage
 description: The perfect tool to find the ideal job for designers
 category: Product Design
-timeline: One Week in September 2020
+timeline: One Week in Sep 2020
 tools: [' Miro ',' Figma ']
 scope: Desktop
 collaboration: [' Ana Gouveia ',' André Mota ',' Daniela Oliveira ',' Sofia Vintém ' ]

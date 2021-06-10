@@ -8,7 +8,7 @@ thumbnail_path: Collision01.jpg
 thumbnail_alt: Mockup of website pages
 description: Design, between the Identity and Fiction Crisis. Online Communication Design Graduate Show
 category: Graduate Show
-timeline: July 2020 - November 2020
+timeline: Jul 2020 - Nov 2020
 tools: [' Illustrator ',' Indesign ',' Photoshop ',' After Effects ',' Figma ']
 scope: Desktop, Mobile
 collaboration: [' João Delgado ',' André Mota ',' Carlos Trabulo ',' Carolina Aguiar ',' Rita Pereira ',' Margarida Coelho ',' Margarida Cardoso ',' Inês Gonçalves ' ]

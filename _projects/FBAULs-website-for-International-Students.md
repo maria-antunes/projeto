@@ -8,7 +8,7 @@ thumbnail_path: FBAUL01.jpg
 thumbnail_alt: Fbaul's website homepage mockup
 description: How can we improve international students' experience on Fbaul's website, considering the current pain points?
 category: Product Design
-timeline: October 2020 - November 2020
+timeline: Oct 2020 - Nov 2020
 tools: Figma
 scope: Desktop
 collaboration: [' André Mota ',' Carlos Trabulo ',' João Delgado ',' Rita Pereira ']

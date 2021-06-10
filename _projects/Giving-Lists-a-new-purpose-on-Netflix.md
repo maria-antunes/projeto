@@ -8,7 +8,7 @@ thumbnail_path: Netflix01.jpg
 thumbnail_alt: Computer mockup with the new my lists page
 description: What if your list was more than an infinite page of saved content?
 category: Product Design
-timeline: December 2020 - January 2021
+timeline: Dec 2020 - Jan 2021
 tools: Figma
 scope: Desktop
 collaboration: [' Isabela Dias ',' Maria João Mestre ']

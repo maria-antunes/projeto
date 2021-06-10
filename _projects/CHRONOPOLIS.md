@@ -6,7 +6,7 @@ thumbnail_path: CHRONOPOLIS01.jpg
 thumbnail_alt: Mockup of chronopolis final book
 description: CHRONOPOLIS is a speculative design project, which creates a city dominated by a machine where the day has 36 hours and each citizen is assigned a schedule that they are obliged to keep without question.
 category: Speculative Design
-timeline: May 2020 - July 2020
+timeline: May 2020 - Jul 2020
 tools: [' Illustrator ',' Indesign ',' Photoshop ',' After Effects ',' Figma ']
 scope: Desktop, Mobile, Editorial
 collaboration: [' Joana Pedrinho ',' João Delgado ',' João Lopes ']

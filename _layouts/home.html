@@ -1,19 +1,21 @@
 ---
 layout: default
 ---
-<header>
-  <h1> Hi, I'm Maria Antunes!</h1>
-  <p> A designer developing research-driven, user-centred digital products along with compelling
+<div class="wrapper">
+  <section class="introduction">
+    <h1 class="main-title-home"> Hi, I'm Maria Antunes!</h1>
+    <p> A designer developing research-driven, user-centred digital products along with compelling
     branding & visual storytelling, creating meaningful experiences for users and businesses alike.</p>
-</header>
-<section>
-  <h2>Check my Latest Work ↓</h2>
-  {% assign projects = site.projects | sort: 'order' %}
-  <div class="grid-container">
-    {% for project in projects %}
-      {% if project.inhomepage == true %}
-        {% include project-thumbnail.html %}
-      {% endif %}
-    {% endfor %}
-  </div>
-</section>
+  </section>
+  <section class="best-projects">
+    <h2>Check my Latest Work ↓</h2>
+    {% assign projects = site.projects | sort: 'order' %}
+    <div class="grid-container">
+      {% for project in projects %}
+        {% if project.inhomepage == true %}
+          {% include project-thumbnail.html %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+</div>

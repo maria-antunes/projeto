@@ -1,0 +1,63 @@
+
+// coisas gerais portanto
+
+html {
+    font-size: 100%;
+}
+
+
+body {
+    font-family: $font-family;
+    color: $text-color;
+    background-color: $background-color;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: auto;
+}
+
+/**
+ * Links
+ */
+
+a {
+    color: $neutral-white-color;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: $primary-color;
+}
+
+/**
+ * Headings
+ */
+
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: $neutral-white-color;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: $neutral-white-color;
+}
+
+
+// para todas as páginas Main
+
+main {
+    min-height: calc(100vh - 150px - 236px);
+}
+
+.wrapper {
+    margin: 0;
+    margin-top: 150px;
+}
+
+/* .no-margin-top {
+
+} */
