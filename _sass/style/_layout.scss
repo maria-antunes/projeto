@@ -79,21 +79,24 @@ footer {
 // especifico da  — 1ºsecção
 
 .introduction {
-  margin-top: 400px;
-
-  .main-title-home {
+    margin-top: 400px;
+   .emoji {
+      font-size: 3rem; 
+   } 
+    .main-title-home {
       font-size: 2.5rem;
       font-weight: 600;
       line-height: 2.5rem;
       text-transform: none;
       color: $neutral-white-color;
-  }
+      margin-top: 1rem;
+    }
 
-  p {
+    p {
       font-size: 1.8rem;
       font-weight: 400;
       max-width: 48rem;
-  }
+    }
 }
 
 // especifico da  — 2ºsecção
@@ -268,6 +271,9 @@ article {
 // para a página dos contacts
 
 .contact-container {
+    .emoji {
+        font-size: 2rem; 
+     } 
     p:first-child {
         font-size: 1.6rem;
         font-weight: 500;
