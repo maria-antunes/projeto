@@ -10,8 +10,6 @@ body {
     font-family: $font-family;
     color: $text-color;
     background-color: $background-color;
-    padding-left: 5%;
-    padding-right: 5%;
     margin: auto;
 }
 
@@ -51,13 +49,13 @@ h3 {
 
 main {
     min-height: calc(100vh - 150px - 236px);
+    // não resulta porque na pagina de projeto a 1 imagem tem 0 :(( 
+    // padding-left: 5%;
+    // padding-right: 5%;
 }
 
 .wrapper {
     margin: 0;
     margin-top: 150px;
+    @include side-margin;
 }
-
-/* .no-margin-top {
-
-} */
