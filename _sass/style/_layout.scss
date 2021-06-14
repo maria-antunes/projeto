@@ -9,15 +9,16 @@
   right: 0;
   padding-top: 1.5rem;
   padding-bottom: 0.5rem;
-  @include side-margin;
-  background: linear-gradient(rgba(19, 19, 19, 0.99) 80%, rgba(0, 0, 0, 0) 200%);
+  padding-left: 5%;
+  padding-right: 5%;
+  background: $gradient-header;
 
   .website-name {
       font-size: 1.8rem;
       font-weight: 700;
       margin: 0;  
       text-decoration: none;
-  }
+    }
 
   ul {
       padding-left: 0;
@@ -29,7 +30,7 @@
       li {
           list-style: none;
       }
-  }
+    }
 
   a {
       font-size: 1.2rem;
@@ -79,23 +80,22 @@ footer {
 // especifico da  — 1ºsecção
 
 .introduction {
-    margin-top: 400px;
+    margin-top: 48vw;
    .emoji {
-      font-size: 3rem; 
+      font-size: 2rem; 
+      margin-bottom: 0;
    } 
     .main-title-home {
-      font-size: 2.5rem;
+      font-size: $font-size-big;
       font-weight: 600;
       line-height: 2.5rem;
       text-transform: none;
       color: $neutral-white-color;
       margin-top: 1rem;
     }
-
     p {
-      font-size: 1.8rem;
-      font-weight: 400;
-      max-width: 48rem;
+      font-size: $font-size-medium;
+      font-weight: $font-weight-regular;
     }
 }
 
@@ -161,7 +161,7 @@ article {
 .project-content {
     margin-bottom: 0;
     header {
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
 
         figure {
             margin: 0;
@@ -174,10 +174,11 @@ article {
         }
         div {
             @include side-margin;
+            max-width: $text-box-size;
 
             h1 {
                 margin-top: 1.5rem;
-                font-size: 1.6rem;
+                font-size: $font-size-medium;
                 font-weight: 500;
                 color: $neutral-white-color;
                 text-transform: none;
@@ -197,25 +198,48 @@ article {
         }
 
         .project-overview {
-            h2 {
-                @include body-regular;
-                font-weight: $font-weight-big;
-                margin-top: 1rem;
-                margin-bottom: 0.2rem;
-            }
-            
-            ul {
-                margin: 0;
-                padding: 0;
-            }
-    
-            li {
-                list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: $card-overlay-color;
+            border-radius: 4px;
+            padding: 1.5rem;
+            padding-left: 10%;
+            padding-right: 10%;
+            justify-content: center;
+            section {
+                width: 200px;
+                padding-bottom: 1rem;
+                h2 {
+                    @include category;
+                    color: $neutral-gray-dark-color;
+                    margin: 0;
+                }
+                ul {
+                    margin: 0;
+                    padding: 0;
+                }
+                li {
+                    list-style: none;
+                }
+                li, p {
+                    color: $neutral-gray-color;
+                }
+            }   
+        }
+
+        .challenge, .process, .takeaways {
+            p,li {
+                max-width: $text-box-size;
+                padding-bottom: 1rem;
             }
         }
 
         .takeaways {
             margin-bottom: 3rem;
+            ul {
+                margin: 0;
+                padding-left: 20px;
+            }
         }
     }
 
@@ -240,31 +264,46 @@ article {
 
 // coisas especificas para o layout do about
 .about-introduction {
+    margin-bottom: 2.5rem;
+    .container {
+        max-width: 540px;
+    }
     figure {
         margin: 0;
         margin-top: 2rem;
+        max-width: 250px;
     }
     img {
         margin: 0;
         width: 100%;
         object-fit: cover;
+        border-radius: 4px;
     }
+    .emoji {
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+        font-size: $font-size-bigger; 
+     } 
 }
 
 .about-content {
-    h2 {
-        @include body-regular;
-        font-weight: $font-weight-big;
-        margin-top: 1rem;
-        margin-bottom: 0.2rem;
-    }
-    ul {
-        margin-bottom: 2.5rem;
-        padding-left: 0;
-    }
-
-    li {
-        list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    section {
+        width: 300px;
+        h2 {
+            @include category;
+        }
+        ul {
+            margin-bottom: 2.5rem;
+            padding-left: 0;
+        }
+    
+        li {
+            list-style: none;
+            padding-bottom: 0.4rem;
+        }
     }
 }
 
@@ -272,9 +311,11 @@ article {
 
 .contact-container {
     .emoji {
-        font-size: 2rem; 
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+        font-size: $font-size-bigger; 
      } 
-    p:first-child {
+    .highlight {
         font-size: 1.6rem;
         font-weight: 500;
         color: #FFFEFB;

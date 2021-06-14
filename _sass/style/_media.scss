@@ -1,0 +1,92 @@
+/* tablet */
+
+$breakpoint-tablet: 778px;
+@media (min-width: $breakpoint-tablet) {
+    
+    $background-color: #021410;
+    body {
+        background-color: $background-color;
+    }
+
+    .website-header {
+        display: flex;
+        justify-content: space-between;
+        ul {
+            margin-top: 0.3rem;
+            width: 22rem;
+        }
+    }
+
+    //homepage
+    .introduction {
+        margin-top: 36vw;
+        .emoji {
+            font-size: 3rem; 
+        } 
+        .main-title-home {
+            font-size: $font-size-bigger;
+            margin-top: 2rem;
+        }
+        p {
+            font-size: $font-size-big;
+        }
+    }
+
+
+    // about
+    .about-introduction {
+        .container {
+            min-width: 300px;
+            max-width: 80%;
+            padding-right: 2rem;
+            p {
+                font-size: $font-size-medium;
+            }
+        }
+    }
+
+    //project page
+    .project-content {
+        .content-wrapper{
+            .project-overview { 
+                padding-left: 2%;
+                padding-right: 2%;
+                flex-wrap: nowrap;
+                section {
+                    width: auto;
+                    padding-right: 10%;
+                    padding-bottom: 0;
+                }
+                section:last-child {
+                    padding-right: 0;
+                } 
+            }
+        }
+    }
+
+}
+
+/* small desktop */
+
+$breakpoint-desktop: 1060px;
+@media (min-width: $breakpoint-desktop) {
+
+    //$background-color: #1a1527;
+    body {
+        background-color: $background-color;
+    }
+
+    .introduction {
+        margin-top: 24vw;
+    }
+
+    .project-content {
+        .content-wrapper{
+            .project-overview { 
+                justify-content: space-evenly;  
+            }
+        }
+    }
+}
+
+

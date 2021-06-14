@@ -17,13 +17,11 @@ the_challenge_text:
 images:
   - image_path: CHRONOPOLIS02.jpg
     image_alt: Mockup of chronopolis final book
-  - image_path: CHRONOPOLIS03.png
-    image_alt: Mockup of chronopolis final book
-  - image_path: CHRONOPOLIS04.png
-    image_alt: Mockup of chronopolis final book
-  - image_path: CHRONOPOLIS05.png
-    image_alt: Mockup of chronopolis final book
-  - image_path: CHRONOPOLIS06.jpg
-    image_alt: Mockup of chronopolis final book
+  - image_path: CHRONOPOLIS03.jpg
+    image_alt: Screenshot from the project website
+  - image_path: CHRONOPOLIS04.jpg
+    image_alt: Second Screenshot from the project website
+  - image_path: CHRONOPOLIS05.jpg
+    image_alt: Third Screenshot from the project website
 behance_link: 109323023/CHRONOPOLIS
 ---

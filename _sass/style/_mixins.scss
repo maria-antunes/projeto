@@ -1,9 +1,8 @@
 // margem de lado para todo o conteudo
 @mixin side-margin {
-    padding-left: 5%;
-    padding-right: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
-
 
 
 // estilos tipograficos:
@@ -14,3 +13,11 @@
     font-weight: $font-weight-regular;
     margin: 0;
   }
+
+@mixin category {
+  @include body-regular;
+  text-transform: uppercase;
+  font-weight: $font-weight-big;
+  margin-top: 1rem;
+  margin-bottom: 0.2rem;
+}
