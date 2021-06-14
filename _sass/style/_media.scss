@@ -17,9 +17,12 @@ $breakpoint-tablet: 778px;
         }
     }
 
+    .wrapper-homepage {
+        margin-top: 80px;
+    }
+
     //homepage
     .introduction {
-        margin-top: 36vw;
         .emoji {
             font-size: 3rem; 
         } 
@@ -47,6 +50,12 @@ $breakpoint-tablet: 778px;
 
     //project page
     .project-content {
+        header {
+            figure {
+                margin: 0;
+                margin-top: 77px;
+            }
+        }
         .content-wrapper{
             .project-overview { 
                 padding-left: 2%;
@@ -54,7 +63,7 @@ $breakpoint-tablet: 778px;
                 flex-wrap: nowrap;
                 section {
                     width: auto;
-                    padding-right: 10%;
+                    padding-right: 8%;
                     padding-bottom: 0;
                 }
                 section:last-child {
@@ -64,6 +73,16 @@ $breakpoint-tablet: 778px;
         }
     }
 
+    // animação do DVD
+    .box{
+        height: 400px;
+        .dvd {
+            animation: moveX 8s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+            @keyframes moveY {
+                from { top: 0; } to { top: calc(400px - 69px); }
+            }
+        } 
+    }
 }
 
 /* small desktop */
@@ -76,10 +95,6 @@ $breakpoint-desktop: 1060px;
         background-color: $background-color;
     }
 
-    .introduction {
-        margin-top: 24vw;
-    }
-
     .project-content {
         .content-wrapper{
             .project-overview { 
@@ -87,6 +102,28 @@ $breakpoint-desktop: 1060px;
             }
         }
     }
+
+    //grid da homepage e do latest work
+ 
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+        article:first-child{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    }
+
+    .communication-design-projects {
+        .grid-container {
+            article:first-child{
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }
+        }
+    }
+
 }
 
 

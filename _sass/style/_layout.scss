@@ -4,6 +4,7 @@
 
 .website-header {
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
@@ -77,14 +78,38 @@ footer {
 /**
  Layout Home
 */
+
+// animação do DVD
+.box{
+    //background-color: #F0F0F0;
+    margin: 0;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    border: 1px solid #111;
+
+    .dvd {
+        width: 160px;
+        position: absolute;
+        animation: moveX 3s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+
+        @keyframes moveX {
+            from { left: 0; } to { left: calc(90vw - 153px); }
+        }
+          
+        @keyframes moveY {
+            from { top: 0; } to { top: calc(300px - 69px); }
+        }
+
+        img {
+            width: 100%;
+        }
+    } 
+}
+
 // especifico da  — 1ºsecção
 
 .introduction {
-    margin-top: 48vw;
-   .emoji {
-      font-size: 2rem; 
-      margin-bottom: 0;
-   } 
     .main-title-home {
       font-size: $font-size-big;
       font-weight: 600;
@@ -108,7 +133,15 @@ footer {
 
 /**
  Project thumbail GERAl (home e página de projeto)
-*/
+*//* figure {
+    margin: 0;
+    margin-top: 135px;
+    height: 50vw;
+    img {
+        height: 100%;
+        object-fit: cover;
+    }
+} */
 // especifico para os artigos 
 
 .grid-container {
@@ -120,9 +153,9 @@ footer {
           max-height: 580px;
 
           img {
-              margin: 0px;
+              //margin: 0px;
               width: 100%;
-              max-height: 580px;
+              //max-height: 580px;
               object-fit: cover;
           }
       }
@@ -166,11 +199,11 @@ article {
         figure {
             margin: 0;
             margin-top: 135px;
-        }
-        img {
-            margin: 0;
-            width: 100%;
-            object-fit: cover;
+            height: 50vw;
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
         }
         div {
             @include side-margin;
@@ -211,7 +244,6 @@ article {
                 padding-bottom: 1rem;
                 h2 {
                     @include category;
-                    color: $neutral-gray-dark-color;
                     margin: 0;
                 }
                 ul {
@@ -271,12 +303,12 @@ article {
     figure {
         margin: 0;
         margin-top: 2rem;
-        max-width: 250px;
+        min-height: 200px;
+        height: 50vw;
+        max-height: 300px;
     }
     img {
-        margin: 0;
-        width: 100%;
-        object-fit: cover;
+        height: 100%;
         border-radius: 4px;
     }
     .emoji {
