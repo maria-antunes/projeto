@@ -18,19 +18,17 @@ body {
  */
 
 a {
-    color: $neutral-white-color;
-}
-
-a:hover {
-    text-decoration: underline;
-    color: $primary-color;
+    color: $neutral-white-color ;
+    &:hover {
+        color: $primary-color;
+        transition-property: color;
+        transition-duration: 0.3s;
+    }
 }
 
 /**
  * Headings
  */
-
-
 h2 {
     font-size: $font-size-medium;
     font-weight: 500;
