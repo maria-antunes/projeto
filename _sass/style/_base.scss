@@ -1,10 +1,12 @@
+//variaveis
+$header-height: 8.5rem;
+$footer-height: 16rem;
 
-// coisas gerais portanto
+// codigo geral
 
 html {
     font-size: 100%;
 }
-
 
 body {
     font-family: $font-family;
@@ -13,9 +15,7 @@ body {
     margin: auto;
 }
 
-/**
- * Links
- */
+// Links
 
 a {
     color: $neutral-white-color ;
@@ -26,19 +26,17 @@ a {
     }
 }
 
-/**
- * Headings
- */
+//Headings
 h2 {
     font-size: $font-size-medium;
-    font-weight: 500;
+    font-weight: $font-weight-big;
     color: $neutral-white-color;
 }
 
 h3 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 0.4rem;
+    font-size: $font-size-regular-plus;
+    font-weight: $font-weight-big;
+    margin-bottom: 0.5rem;
     color: $neutral-white-color;
 }
 
@@ -46,20 +44,17 @@ h3 {
 // para todas as páginas Main
 
 main {
-    min-height: calc(100vh - 150px - 236px);
-    // não resulta porque na pagina de projeto a 1 imagem tem 0 :(( 
-    // padding-left: 5%;
-    // padding-right: 5%;
+    min-height: calc(100vh - #{$header-height} - #{$footer-height});
 }
 
 .wrapper {
     margin: 0;
-    margin-top: 140px;
+    margin-top: $header-height;
     @include side-margin;
 }
 
 .wrapper-homepage {
     margin: 0;
-    margin-top: 140px;
+    margin-top: $header-height;
     @include side-margin;
 }

@@ -15,8 +15,8 @@
   background: $gradient-header;
 
   .website-name {
-      font-size: 1.8rem;
-      font-weight: 700;
+      font-size: $font-size-big;
+      font-weight: $font-weight-bigger;
       margin: 0;  
       text-decoration: none;
     }
@@ -34,7 +34,7 @@
     }
 
   a {
-      font-size: 1.2rem;
+      font-size: $font-size-regular-plus;
       text-decoration: none;
   }
 }
@@ -51,13 +51,13 @@ footer {
   @include side-margin;
 
   .bigger {
-      font-size: 1.3rem;
-      font-weight: 500;
+      font-size: $font-size-medium;
+      font-weight: $font-weight-big;
       padding-bottom: 1rem;
   }
 
   p {
-      font-size: 1rem;
+      font-size: $font-size-regular;
       margin-bottom: 0;
       line-height: 1rem;
   }
@@ -67,7 +67,7 @@ footer {
       justify-content: space-between;
       margin-top: 1rem;
       p {
-          font-size: 0.8rem;
+          font-size: $font-size-small;
           color: $neutral-gray-dark-color;
           padding-right: 1rem;
       }
@@ -81,24 +81,21 @@ footer {
 
 // animação do DVD
 .box{
-    //background-color: #F0F0F0;
     margin: 0;
     width: 100%;
-    height: 300px;
+    height: 19rem;
     position: relative;
-    border: 1px solid #111;
-
     .dvd {
-        width: 160px;
+        width: 10rem;
         position: absolute;
         animation: moveX 3s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
 
         @keyframes moveX {
-            from { left: 0; } to { left: calc(90vw - 153px); }
+            from { left: 0; } to { left: calc(90vw - 10rem); }
         }
           
         @keyframes moveY {
-            from { top: 0; } to { top: calc(300px - 69px); }
+            from { top: 0; } to { top: calc(19rem - 5.8rem); }
         }
 
         img {
@@ -111,16 +108,16 @@ footer {
 
 .introduction {
     .main-title-home {
-      font-size: $font-size-big;
-      font-weight: 600;
-      line-height: 2.5rem;
-      text-transform: none;
-      color: $neutral-white-color;
-      margin-top: 1rem;
+        font-size: $font-size-big;
+        font-weight: $font-weight-bigger;
+        line-height: 2.5rem;
+        text-transform: none;
+        color: $neutral-white-color;
+        margin-top: 1rem;
     }
     p {
-      font-size: $font-size-medium;
-      font-weight: $font-weight-regular;
+        @include body-regular;
+        max-width: $text-box-size-big;
     }
 }
 
@@ -130,18 +127,6 @@ footer {
   margin-top: 3rem;
 }
 
-
-/**
- Project thumbail GERAl (home e página de projeto)
-*//* figure {
-    margin: 0;
-    margin-top: 135px;
-    height: 50vw;
-    img {
-        height: 100%;
-        object-fit: cover;
-    }
-} */
 // especifico para os artigos 
 
 .grid-container {
@@ -152,7 +137,6 @@ footer {
           margin: 0;
           max-height: 580px;
           overflow: hidden;
-          background-color: aqua;
           img {
               margin: 0;
               width: 100%;
@@ -168,8 +152,8 @@ footer {
       .timeline-and-category {
           color: $neutral-gray-color;
           text-transform: uppercase;
-          font-size: 0.8rem;
-          font-weight: 500;
+          font-size: $font-size-small;
+          font-weight: $font-weight-big;
       }
       p {
           color: $text-color;
@@ -185,11 +169,8 @@ footer {
 
 article {
   h1 {
-      font-size: 1rem;
-      font-weight: 400;
-      margin: 0;
-      text-transform: uppercase;
-      color: $neutral-gray-dark-color;
+        @include category;
+        color: $neutral-gray-dark-color;
   }
 }
 
@@ -204,7 +185,7 @@ article {
 
         figure {
             margin: 0;
-            margin-top: 135px;
+            margin-top: $header-height;
             height: 50vw;
             img {
                 height: 100%;
@@ -216,9 +197,9 @@ article {
             max-width: $text-box-size;
 
             h1 {
-                margin-top: 1.5rem;
-                font-size: $font-size-medium;
-                font-weight: 500;
+                margin-top: 3rem;
+                font-size: $font-size-big;
+                font-weight: $font-weight-big;
                 color: $neutral-white-color;
                 text-transform: none;
             }
@@ -240,7 +221,7 @@ article {
             display: flex;
             flex-wrap: wrap;
             background-color: $card-overlay-color;
-            border-radius: 4px;
+            border-radius: 0.2rem;
             padding: 1.5rem;
             padding-left: 10%;
             padding-right: 10%;
@@ -276,7 +257,7 @@ article {
             margin-bottom: 3rem;
             ul {
                 margin: 0;
-                padding-left: 20px;
+                padding-left: 1.2rem;
             }
         }
     }
@@ -304,7 +285,7 @@ article {
 .about-introduction {
     margin-bottom: 2.5rem;
     .container {
-        max-width: 540px;
+        max-width: $text-box-size;
     }
     figure {
         margin: 0;
@@ -315,13 +296,8 @@ article {
     }
     img {
         height: 100%;
-        border-radius: 4px;
+        border-radius: 0.2rem;
     }
-    .emoji {
-        margin-top: 2rem;
-        margin-bottom: 0.5rem;
-        font-size: $font-size-bigger; 
-     } 
 }
 
 .about-content {
@@ -340,7 +316,7 @@ article {
     
         li {
             list-style: none;
-            padding-bottom: 0.4rem;
+            padding-bottom: 0.5rem;
         }
     }
 }
@@ -354,8 +330,8 @@ article {
         font-size: $font-size-bigger; 
      } 
     .highlight {
-        font-size: 1.6rem;
-        font-weight: 500;
-        color: #FFFEFB;
+        font-size: $font-size-medium;
+        font-weight: $font-weight-big;
+        color: $neutral-white-color;
       }
 }

@@ -2,8 +2,7 @@
 @mixin side-margin {
     margin-left: 5%;
     margin-right: 5%;
-  }
-
+}
 
 // estilos tipograficos:
 
@@ -12,6 +11,7 @@
     font-size: $font-size-regular;
     font-weight: $font-weight-regular;
     margin: 0;
+    //max-width: $text-box-size-big; ????
   }
 
 @mixin category {

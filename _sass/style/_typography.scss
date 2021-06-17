@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 
-// Define defaults for each variable.
 $font-family: 'DM Sans', Arial, sans-serif !default;
 
-
-$font-size-regular: 1rem !default;
 $font-size-small: 0.8rem;
+$font-size-regular: 1rem !default;
+$font-size-regular-plus: 1.2rem;
 $font-size-medium: 1.5rem;
-$font-size-big: 1.7rem;
+$font-size-big: 1.8rem;
 $font-size-bigger: 2.5rem;
 
 $font-weight-regular: 400 !default;
 $font-weight-big: 500;
 $font-weight-bigger: 700;
 
-// $base-line-height: 1rem !default;
+// METER EM REM!!!
+$text-box-size: 38rem;
+$text-box-size-big: 53rem;
 
-$text-box-size: 600px;

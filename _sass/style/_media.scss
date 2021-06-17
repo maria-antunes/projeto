@@ -1,31 +1,23 @@
 /* tablet */
-
 $breakpoint-tablet: 778px;
 @media (min-width: $breakpoint-tablet) {
-    
-    $background-color: #021410;
-    body {
-        background-color: $background-color;
-    }
 
     .website-header {
         display: flex;
         justify-content: space-between;
         ul {
-            margin-top: 0.3rem;
+            margin-top: 0.5rem;
             width: 22rem;
         }
     }
 
+    $header-height: 5rem;
     .wrapper-homepage {
-        margin-top: 80px;
+        margin-top: $header-height;
     }
 
     //homepage
     .introduction {
-        .emoji {
-            font-size: 3rem; 
-        } 
         .main-title-home {
             font-size: $font-size-bigger;
             margin-top: 2rem;
@@ -39,7 +31,7 @@ $breakpoint-tablet: 778px;
     // about
     .about-introduction {
         .container {
-            min-width: 300px;
+            min-width: 19rem;
             max-width: 80%;
             padding-right: 2rem;
             p {
@@ -53,7 +45,7 @@ $breakpoint-tablet: 778px;
         header {
             figure {
                 margin: 0;
-                margin-top: 77px;
+                margin-top: 5rem;
             }
         }
         .content-wrapper{
@@ -75,11 +67,11 @@ $breakpoint-tablet: 778px;
 
     // animação do DVD
     .box{
-        height: 400px;
+        height: 25rem;
         .dvd {
             animation: moveX 8s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
             @keyframes moveY {
-                from { top: 0; } to { top: calc(400px - 69px); }
+                from { top: 0; } to { top: calc(25rem - 5.8rem); }
             }
         } 
     }
@@ -89,12 +81,6 @@ $breakpoint-tablet: 778px;
 
 $breakpoint-desktop: 1060px;
 @media (min-width: $breakpoint-desktop) {
-
-    //$background-color: #1a1527;
-    body {
-        background-color: $background-color;
-    }
-
     .project-content {
         .content-wrapper{
             .project-overview { 
