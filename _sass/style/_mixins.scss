@@ -6,12 +6,10 @@
 
 // estilos tipograficos:
 
-// estilo de texto / paragrafo
 @mixin body-regular {
     font-size: $font-size-regular;
     font-weight: $font-weight-regular;
     margin: 0;
-    //max-width: $text-box-size-big; ????
   }
 
 @mixin category {

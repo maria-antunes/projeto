@@ -1,111 +1,113 @@
- /* 
- website header 
- */
-
+// WEBSITE HEADER
 .website-header {
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding-top: 1.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 5%;
-  padding-right: 5%;
-  background: $gradient-header;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 5%;
+    padding-right: 5%;
+    background: $gradient-header;
 
-  .website-name {
-      font-size: $font-size-big;
-      font-weight: $font-weight-bigger;
-      margin: 0;  
-      text-decoration: none;
+    .website-name {
+        font-size: $font-size-big;
+        font-weight: $font-weight-bigger;
+        margin: 0;
+        text-decoration: none;
     }
 
-  ul {
-      padding-left: 0;
-      margin-top: 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      max-width: 22rem;
+    ul {
+        padding-left: 0;
+        margin-top: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        max-width: 22rem;
 
-      li {
-          list-style: none;
-      }
+        li {
+            list-style: none;
+        }
     }
 
-  a {
-      font-size: $font-size-regular-plus;
-      text-decoration: none;
-  }
+    a {
+        font-size: $font-size-regular-plus;
+        text-decoration: none;
+    }
 }
 
-
-
-/**
- footer
-*/
-
+// FOOTER
 footer {
-  padding-bottom: 1.5rem;
-  padding-top: 4rem;
-  @include side-margin;
+    padding-bottom: 1.5rem;
+    padding-top: 4rem;
+    @include side-margin;
 
-  .bigger {
-      font-size: $font-size-medium;
-      font-weight: $font-weight-big;
-      padding-bottom: 1rem;
-  }
+    .bigger {
+        font-size: $font-size-medium;
+        font-weight: $font-weight-big;
+        padding-bottom: 1rem;
+    }
 
-  p {
-      font-size: $font-size-regular;
-      margin-bottom: 0;
-      line-height: 1rem;
-  }
+    p {
+        font-size: $font-size-regular;
+        margin-bottom: 0;
+        line-height: 1rem;
+    }
 
-  div {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 1rem;
-      p {
-          font-size: $font-size-small;
-          color: $neutral-gray-dark-color;
-          padding-right: 1rem;
-      }
-  }
+    div {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+
+        p {
+            font-size: $font-size-small;
+            color: $neutral-gray-dark-color;
+            padding-right: 1rem;
+        }
+    }
 }
 
+// LAYOUT HOME
 
-/**
- Layout Home
-*/
-
-// animação do DVD
-.box{
+// Animação do DVD
+.box {
     margin: 0;
     width: 100%;
     height: 19rem;
     position: relative;
+
     .dvd {
         width: 10rem;
         position: absolute;
         animation: moveX 3s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
 
-        @keyframes moveX {
-            from { left: 0; } to { left: calc(90vw - 10rem); }
-        }
-          
-        @keyframes moveY {
-            from { top: 0; } to { top: calc(19rem - 5.8rem); }
-        }
-
         img {
             width: 100%;
         }
-    } 
+    }
 }
 
-// especifico da  — 1ºsecção
+@keyframes moveX {
+    from {
+        left: 0;
+    }
 
+    to {
+        left: calc(90vw - 10rem);
+    }
+}
+
+@keyframes moveY {
+    from {
+        top: 0;
+    }
+
+    to {
+        top: calc(19rem - 5.8rem);
+    }
+}
+
+// Secção introduction
 .introduction {
     .main-title-home {
         font-size: $font-size-big;
@@ -115,71 +117,129 @@ footer {
         color: $neutral-white-color;
         margin-top: 1rem;
     }
+
     p {
         @include body-regular;
         max-width: $text-box-size-big;
     }
 }
 
-// especifico da  — 2ºsecção
-
+// Secção best projects
 .best-projects {
-  margin-top: 3rem;
+    margin-top: 3rem;
 }
 
-// especifico para os artigos 
-
+// PROJECT THUMBNAIL ARTICLES
 .grid-container {
-  article {
-      margin-bottom: 6rem;
-      figure {
-          line-height: 0;
-          margin: 0;
-          max-height: 580px;
-          overflow: hidden;
-          img {
-              margin: 0;
-              width: 100%;
-              object-fit: cover;
-              transition-duration: 0.5s;
-              transform: scale(1.0);
-              &:hover {
+    article {
+        margin-bottom: 6rem;
+
+        figure {
+            line-height: 0;
+            margin: 0;
+            max-height: 580px;
+            overflow: hidden;
+
+            img {
+                margin: 0;
+                width: 100%;
+                object-fit: cover;
                 transition-duration: 0.5s;
-                transform: scale(1.04);
-              }
-          }
-      }
-      .timeline-and-category {
-          color: $neutral-gray-color;
-          text-transform: uppercase;
-          font-size: $font-size-small;
-          font-weight: $font-weight-big;
-      }
-      p {
-          color: $text-color;
-      }
-  }
+                transform: scale(1.0);
+
+                &:hover {
+                    transition-duration: 0.5s;
+                    transform: scale(1.04);
+                }
+            }
+        }
+
+        .timeline-and-category {
+            color: $neutral-gray-color;
+            text-transform: uppercase;
+            font-size: $font-size-small;
+            font-weight: $font-weight-big;
+        }
+
+        p {
+            color: $text-color;
+        }
+    }
 }
 
-
-
-/**
- Layout page (o h1 da página ex:"About, Contact, Latest Work")
-*/
-
+// LAYOUT PAGE
 article {
-  h1 {
+    h1 {
         @include category;
         color: $neutral-gray-dark-color;
-  }
+    }
 }
 
-/**
- Layout projectpage
-*/
+// About page
+.about-introduction {
+    margin-bottom: 2.5rem;
 
+    .container {
+        max-width: $text-box-size;
+    }
+
+    figure {
+        margin: 0;
+        margin-top: 2rem;
+        min-height: 200px;
+        height: 50vw;
+        max-height: 300px;
+    }
+
+    img {
+        height: 100%;
+        border-radius: 0.2rem;
+    }
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+
+    section {
+        width: 300px;
+
+        h2 {
+            @include category;
+        }
+
+        ul {
+            margin-bottom: 2.5rem;
+            padding-left: 0;
+        }
+
+        li {
+            list-style: none;
+            padding-bottom: 0.5rem;
+        }
+    }
+}
+
+// Contact Page
+.contact-container {
+    .emoji {
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+        font-size: $font-size-bigger;
+    }
+
+    .highlight {
+        font-size: $font-size-medium;
+        font-weight: $font-weight-big;
+        color: $neutral-white-color;
+    }
+}
+
+// LAYOUT PROJECT PAGE
 .project-content {
     margin-bottom: 0;
+
     header {
         margin-bottom: 2rem;
 
@@ -187,11 +247,13 @@ article {
             margin: 0;
             margin-top: $header-height;
             height: 50vw;
+
             img {
                 height: 100%;
                 object-fit: cover;
             }
         }
+
         div {
             @include side-margin;
             max-width: $text-box-size;
@@ -206,7 +268,7 @@ article {
         }
     }
 
-    .content-wrapper{
+    .content-wrapper {
         @include side-margin;
 
         h2 {
@@ -226,112 +288,68 @@ article {
             padding-left: 10%;
             padding-right: 10%;
             justify-content: center;
+
             section {
                 width: 200px;
                 padding-bottom: 1rem;
+
                 h2 {
                     @include category;
                     margin: 0;
                 }
+
                 ul {
                     margin: 0;
                     padding: 0;
                 }
+
                 li {
                     list-style: none;
                 }
-                li, p {
+
+                li,
+                p {
                     color: $neutral-gray-color;
                 }
-            }   
+            }
         }
 
-        .challenge, .process, .takeaways {
-            p,li {
+        .challenge,
+        .process,
+        .takeaways {
+
+            p,
+            li {
                 max-width: $text-box-size;
                 padding-bottom: 1rem;
             }
         }
 
+        .process {
+            figure {
+                margin: 0;
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+                overflow-x: scroll;
+                display: flex;
+                min-height: 320px;
+                height: 60vw;
+                max-height: 580px;
+    
+                >* {
+                    height: 100%;
+                    margin-right: 16px;
+                }
+            }
+        }
+
         .takeaways {
             margin-bottom: 3rem;
+
             ul {
                 margin: 0;
                 padding-left: 1.2rem;
             }
         }
     }
-
-    .process {
-        figure {
-            margin: 0;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-            overflow-x: scroll;
-            display: flex;
-            min-height: 320px;
-            height: 60vw;
-            max-height: 580px; 
-
-            > * {
-                height: 100%;
-                margin-right: 16px;
-            }
-        }
-    }
-}  
-
-// coisas especificas para o layout do about
-.about-introduction {
-    margin-bottom: 2.5rem;
-    .container {
-        max-width: $text-box-size;
-    }
-    figure {
-        margin: 0;
-        margin-top: 2rem;
-        min-height: 200px;
-        height: 50vw;
-        max-height: 300px;
-    }
-    img {
-        height: 100%;
-        border-radius: 0.2rem;
-    }
-}
-
-.about-content {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1000px;
-    section {
-        width: 300px;
-        h2 {
-            @include category;
-        }
-        ul {
-            margin-bottom: 2.5rem;
-            padding-left: 0;
-        }
-    
-        li {
-            list-style: none;
-            padding-bottom: 0.5rem;
-        }
-    }
-}
-
-// para a página dos contacts
-
-.contact-container {
-    .emoji {
-        margin-top: 2rem;
-        margin-bottom: 0.5rem;
-        font-size: $font-size-bigger; 
-     } 
-    .highlight {
-        font-size: $font-size-medium;
-        font-weight: $font-weight-big;
-        color: $neutral-white-color;
-      }
 }

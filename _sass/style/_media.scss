@@ -1,4 +1,4 @@
-/* tablet */
+// tablet
 $breakpoint-tablet: 778px;
 @media (min-width: $breakpoint-tablet) {
 
@@ -27,6 +27,16 @@ $breakpoint-tablet: 778px;
         }
     }
 
+    // animação do DVD
+    .box{
+        height: 25rem;
+        .dvd {
+            animation: moveX 8s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+            @keyframes moveY {
+                from { top: 0; } to { top: calc(25rem - 5.8rem); }
+            }
+        } 
+    }
 
     // about
     .about-introduction {
@@ -64,25 +74,13 @@ $breakpoint-tablet: 778px;
             }
         }
     }
-
-    // animação do DVD
-    .box{
-        height: 25rem;
-        .dvd {
-            animation: moveX 8s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
-            @keyframes moveY {
-                from { top: 0; } to { top: calc(25rem - 5.8rem); }
-            }
-        } 
-    }
 }
 
-/* small desktop */
-
+// desktop
 $breakpoint-desktop: 1060px;
 @media (min-width: $breakpoint-desktop) {
     .project-content {
-        .content-wrapper{
+        .content-wrapper {
             .project-overview { 
                 justify-content: space-evenly;  
             }
@@ -90,12 +88,11 @@ $breakpoint-desktop: 1060px;
     }
 
     //grid da homepage e do latest work
- 
     .grid-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 2rem;
-        article:first-child{
+        article:first-child {
             grid-column-start: 1;
             grid-column-end: 3;
         }
@@ -103,13 +100,12 @@ $breakpoint-desktop: 1060px;
 
     .communication-design-projects {
         .grid-container {
-            article:first-child{
+            article:first-child {
                 grid-column-start: 1;
                 grid-column-end: 2;
             }
         }
     }
-
 }
 
 

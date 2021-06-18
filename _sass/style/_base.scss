@@ -1,9 +1,8 @@
-//variaveis
+// Variables
 $header-height: 8.5rem;
 $footer-height: 16rem;
 
-// codigo geral
-
+// Geral
 html {
     font-size: 100%;
 }
@@ -16,9 +15,9 @@ body {
 }
 
 // Links
-
 a {
-    color: $neutral-white-color ;
+    color: $neutral-white-color;
+
     &:hover {
         color: $primary-color;
         transition-property: color;
@@ -26,7 +25,7 @@ a {
     }
 }
 
-//Headings
+// Headings
 h2 {
     font-size: $font-size-medium;
     font-weight: $font-weight-big;
@@ -40,13 +39,12 @@ h3 {
     color: $neutral-white-color;
 }
 
-
-// para todas as páginas Main
-
+// Main
 main {
     min-height: calc(100vh - #{$header-height} - #{$footer-height});
 }
 
+// Wrappers
 .wrapper {
     margin: 0;
     margin-top: $header-height;
